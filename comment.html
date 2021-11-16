@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Box Using JavaScript</title>
+</head>
+<body>
+    
+<section id="Comment-wrap">
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur incidunt, harum expedita facere earum ullam quod hic saepe deserunt culpa facilis assumenda aspernatur inventore placeat sunt impedit explicabo, rerum minima.</p>
+
+<p>Minima et ullam libero consequatur, illo nobis doloremque magnam. Eum provident repellat consequuntur ab corrupti velit, aut quisquam, voluptatem qui dolor, sequi ipsa cumque. Fugit quisquam distinctio quam amet repellat?</p>
+
+</section>
+
+<textarea name="" id="MyComment" cols="30" rows="10"></textarea>
+<br>
+ <button id="update"> Submit Post </button>
+
+ <script>
+     /*
+document.getElementById('update').addEventListener('click',function(){
+    const myComments = document.getElementById('MyComment');
+    const wrapComment = document.getElementById('Comment-wrap');
+    const autos = document.createElement('p');
+    autos.innerText = myComments.value;
+    myComments.value = '';
+   wrapComment.appendChild(autos);
+
+   const singleCom = wrapComment.children[0];
+   const singleComStyle = wrapComment.children[1];
+   wrapComment.removeChild(singleCom);
+   singleComStyle.style.color = "red";
+
+})
+
+    */
+</script>
+
+
+<br>
+<br>
+<h3 id='worldCup'>Vanasih World CUP!</h3>
+<input type="text"  id="delete-content" placeholder="Type delete.">
+<button id="okay" disabled> Decide!</button>
+
+<script>
+    document.getElementById('okay').addEventListener('click', function(){
+       const mamlaClear = document.getElementById('worldCup');
+       mamlaClear.style.display = 'none';
+    })
+
+document.getElementById('delete-content').addEventListener('keyup', function(event){
+        if ( event.target.value == 'delete'){
+            document.getElementById('okay').removeAttribute('disabled');
+
+        }
+        else {
+
+            document.getElementById('okay').setAttribute('disabled',true);
+        }
+
+    })
+
+</script>
+
+
+
+</body>
+</html>

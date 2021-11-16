@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My practice Class today! </title>
+
+</head>
+<body>
+<header>
+    <nav>
+
+    </nav>
+</header>
+<main>
+    <style>
+                    #first-submit {
+                        background: red;
+                        color: white;
+                        padding: 8px 12px;
+                        border: none;
+                        font-size: 18px;
+                        
+                        border-radius: 3px; }
+
+
+                        .login-from input {
+                            border: none;
+                            border: 1px solid burlywood;
+                            padding: 10px;
+                            border-radius: 5px;
+                            font-size: 14px;
+                            color: green; 
+                        }
+
+                        .login-from {
+                            margin: 50px auto;
+                            text-align: center;
+                        }
+
+                        button#first-submit:disabled {
+                          background-color: darkgray;
+                        }
+    </style>
+
+
+    <section id="first-add">
+
+        <div class="login-from">
+            <h2>TAKA Uthao!</h2>
+            <input type="text" id="first-name" placeholder="Type your Name">
+            <br> <br>
+        <input type="email" name="" id="first-email" placeholder="Type your Email">
+      
+            <br> <br>
+            <button id="first-submit" disabled>Update</button>
+            
+            <div class="login-result">
+                <h6 id="reslut-name"> </h6>
+                
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <script>
+
+document.getElementById('first-email').addEventListener('keyup', function(event){
+        if ( event.target.value == 'com'){
+            document.getElementById('first-submit').removeAttribute('disabled');
+
+        }
+        else {
+
+            document.getElementById('first-submit').setAttribute('disabled',true);
+        }
+
+    })
+
+
+    document.getElementById('first-submit').addEventListener('click',function(){
+
+    const outputName = document.getElementById('first-name');
+    const outputEmail = document.getElementById('first-email');
+    const reslutName = document.getElementById('reslut-name');
+        reslutName.innerText = ('Thank you : ' + outputName.value) + ('.  Here is you email address : ' + outputEmail.value) ;
+        reslutName.style.color = "red";
+        reslutName.style.fontSize = "24px";
+        outputEmail.value = '';
+        outputName.value = '';
+
+    })
+
+ 
+
+
+
+
+    </script>
+
+
+
+
+</main>
+<footer>
+
+</footer>
+</body>
+</html>

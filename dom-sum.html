@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<main>
+<h2>My friendlist</h2>
+
+
+
+<ul id="friend">
+    <li >friend-1</li>
+    <li>friend-3</li>
+    <li>friend-4</li>
+    <li>friend-5</li>
+
+</ul>
+
+<script>
+    const bondhu = document.getElementById('friend');
+    const spBondhu = bondhu.children[3]
+    bondhu.removeChild (spBondhu);
+    const add = document.createElement('li');
+    add.innerText = 'Frind-NoNE' ;
+    bondhu.appendChild(add);
+
+
+    function handleJustClick (){
+    const Para = document.getElementById('addContent');
+    Para.innerText = 'Set by using javascrit';
+    Para.style.color = "white";
+    Para.style.backgroundColor = "red";
+    Para.style.padding = "10px";
+    Para.style.fontSize = "20px";
+}
+
+
+
+</script>
+
+<p id= 'addContent' ></p>
+<button onclick="handleJustClick()">Junt Functions</button>
+<button id="Fhu">Direct add event lister</button>
+
+
+<input  id="type-name" type="text">
+<button id="update-name" >Update</button>
+
+<script>
+
+    // directListener
+    document.getElementById('update-name').addEventListener('click', function(){
+    const inputFix = document.getElementById('type-name');
+    const Para = document.getElementById('addContent');
+    Para.innerText = inputFix.value;
+    inputFix.value = "";
+    Para.style.color = "white";
+    Para.style.backgroundColor = "Green";
+
+
+})
+
+
+/*
+document.getElementById('Fhu').addEventListener('click', function(){
+    const Para = document.getElementById('addContent');
+    Para.innerText = 'Digbaji By javascrit';
+    Para.style.color = "white";
+    Para.style.backgroundColor = "Green";
+    Para.style.padding = "10px";
+    Para.style.fontSize = "20px";
+
+})
+*/ 
+
+
+
+</script>
+
+</main>
+
+</body>
+</html>
